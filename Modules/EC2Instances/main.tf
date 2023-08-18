@@ -6,7 +6,7 @@ resource "aws_instance" "db-server" {
 
   subnet_id                   = var.private_subnet_id
   vpc_security_group_ids      = [var.backend_sg_id]
-  associate_public_ip_address = true
+  associate_public_ip_address = false
   availability_zone = "us-east-1a"
 
   user_data = <<-EOF
@@ -62,7 +62,7 @@ resource "aws_instance" "memcache" {
 
   subnet_id                   = "${var.private_subnet_id}"
   vpc_security_group_ids      = [var.backend_sg_id]
-  associate_public_ip_address = true
+  associate_public_ip_address = false
   availability_zone = "us-east-1a"
 
   user_data = <<-EOF
@@ -90,7 +90,7 @@ resource "aws_instance" "rabbitmq" {
 
   subnet_id                   = "${var.private_subnet_id}"
   vpc_security_group_ids      = [var.backend_sg_id]
-  associate_public_ip_address = true
+  associate_public_ip_address = false
   availability_zone = "us-east-1a"
 
   user_data = <<-EOF
