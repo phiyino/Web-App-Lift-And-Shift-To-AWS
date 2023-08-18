@@ -1,0 +1,9 @@
+variable "ami_id" {}
+variable "project_name" {}
+variable "public_subnet_id" {}
+variable "private_subnet_id" {}
+variable "instance_type" {}
+variable "key_pair" {}
+variable "tomcat_sg_id" {}
+variable "backend_sg_id" {}
+variable "ami_ubuntu" {}
